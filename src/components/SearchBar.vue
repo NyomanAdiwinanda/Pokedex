@@ -43,7 +43,7 @@ export default {
   methods: {
     getPokemonDetail(url) {
       this.$store.dispatch('fetchPokemonDetail', url);
-      this.$store.commit('setEvolutions', []);
+
       const newUrl = url.replace('pokemon', 'pokemon-species');
       this.$store.dispatch('fetchEvolutions', newUrl);
 
@@ -57,8 +57,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '../shared/colours';
-@import '../shared/spacing';
+@import '../styling/colours';
+@import '../styling/spacing';
 
 .panel {
   padding: $xl $xl 0 $xl;

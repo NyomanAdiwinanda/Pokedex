@@ -6,6 +6,12 @@
 
 <script>
 export default {
+  /**
+   * The goal for codes below is for:
+   * 1) when the app is loaded, it will automatically fetch all pokemon name from the API
+   * 2) fetch pokemon detail data with id of 1 for the initial state of pokemon detail --> will load bulbasaur for the first time
+   * 3) fetching evolutions data with pokemon-species of id 1 for the initial state of evolutions --> will give bulbasaur, ivysaur, and venusaur for the first time
+   */
   created() {
     this.$store.dispatch('fetchFullList');
     this.$store.dispatch(

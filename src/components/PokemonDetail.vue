@@ -7,6 +7,9 @@
     <div id="description-container">
       <img id="pokemon-sprite" :src="pokemonDetail.sprites.front_default" />
     </div>
+
+    <!-- make each information get from the API modular by seperates then into components for easier modification in the future -->
+    <!-- Pass the information needed via props -->
     <Types :types="pokemonDetail.types" name="Types" />
     <Height :height="pokemonDetail.height" name="Height" />
     <Weight :weight="pokemonDetail.weight" name="Weight" />
@@ -38,6 +41,7 @@ export default {
   },
 
   computed: {
+    // code below is to get the state from the vuex store
     pokemonDetail() {
       return this.$store.state.pokemonDetail;
     },
@@ -50,8 +54,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '../shared/colours';
-@import '../shared/spacing';
+@import '../styling/colours';
+@import '../styling/spacing';
 
 #pokemon-sprite {
   margin: 0 auto;

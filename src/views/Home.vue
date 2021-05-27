@@ -26,8 +26,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '../shared/colours';
-@import '../shared/spacing';
+@import '../styling/colours';
+@import '../styling/spacing';
 
 h2 {
   font-size: 14px;

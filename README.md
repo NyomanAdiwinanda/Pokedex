@@ -1,24 +1,13 @@
-# wisatabook
+# Pokedex Webapp
 
-## Project setup
-```
-npm install
-```
+### About
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+A web application for searching details of a pokemon. The details are fetched from the [pokeAPI](https://pokeapi.co/)
 
-### Compiles and minifies for production
-```
-npm run build
-```
+### Tech Stack
 
-### Lints and fixes files
-```
-npm run lint
-```
+FrontEnd: Vue, Vuex, Vue Router, Axios, Bootstrap-Vue
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+### Site Url
+
+https://wisatabook-pokedex.web.app/
