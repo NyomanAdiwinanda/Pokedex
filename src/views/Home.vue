@@ -1,18 +1,52 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+  <b-container fluid>
+    <div id="pokedex-container">
+      <b-row>
+        <b-col>
+          <SearchBar />
+        </b-col>
+        <b-col>
+          <PokemonDetail />
+        </b-col>
+      </b-row>
+    </div>
+  </b-container>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+import SearchBar from '../components/SearchBar.vue';
+import PokemonDetail from '../components/PokemonDetail.vue';
 
 export default {
-  name: 'Home',
   components: {
-    HelloWorld
+    SearchBar,
+    PokemonDetail,
+  },
+};
+</script>
+
+<style lang="scss" scoped>
+@import '../shared/colours';
+@import '../shared/spacing';
+
+h2 {
+  font-size: 14px;
+  font-weight: bold;
+  color: $white;
+}
+
+h4 {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+@media only screen and (max-width: 810px) {
+  .pokemon-evol-sprite-container {
+    float: none;
+  }
+
+  #pokemon-info-panel {
+    margin-bottom: $md;
   }
 }
-</script>
+</style>
